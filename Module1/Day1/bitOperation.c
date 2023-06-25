@@ -6,6 +6,7 @@
     - bit_operations(int num, int oper_type);.*/
     
 #include <stdio.h>
+
 int bit_operations(int num, int oper_type) 
 {
     if (oper_type == 1) 

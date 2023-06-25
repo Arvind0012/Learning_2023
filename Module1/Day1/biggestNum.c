@@ -11,16 +11,16 @@ int main()
     scanf("%d", &n2);
     
     if(n1 > n2){
-        printf("%d is the Greatest one !", n1);
+        printf("%d is the Greatest one !\n", n1);
     }
     else{
-        printf("%d is the Greatest one !", n2);
+        printf("%d is the Greatest one !\n", n2);
     }
 
     return 0;
 }
 
-1.2 Ternary Operator
+// 1.2 Ternary Operator
 
 #include <stdio.h>
 

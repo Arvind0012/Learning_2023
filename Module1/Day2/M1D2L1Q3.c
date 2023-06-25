@@ -14,7 +14,9 @@ int main()
     int i,sum = 0;
     int arr[100];
     int size;
+    printf("Enter size of Array: ");
     scanf("%d",&size);
+    printf("Enter Elements..\n");
     for ( i= 0; i < size; i++)
     {
         scanf("%d",&arr[i]);

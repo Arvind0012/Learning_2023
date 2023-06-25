@@ -47,6 +47,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+
 #define BUFFER_SIZE 4096
 
 void toUpperCase(char *str) 

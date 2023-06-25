@@ -18,7 +18,7 @@ void Exponent(double x)
     printf("Exponent (binary): 0b");
     for (int i = 11; i >= 0; i--) 
     {
-        printf("%d", (exponent >> i) & 1);
+        printf("%lld", (exponent >> i) & 1);
     }
     printf("\n");
 }

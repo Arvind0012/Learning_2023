@@ -13,6 +13,7 @@ Topics to be covered
 
 
 #include <stdio.h>
+
 int countBits(int n) 
 {
     int c = 0;

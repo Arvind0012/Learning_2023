@@ -17,26 +17,26 @@ int main()
 {
   char ch,temp;
   double first, second;
-  printf("Enter Number1:");
+  printf("Enter Number1: ");
   scanf("%lf", &first);
-  printf("Enter the operator:" );
+  printf("Enter the operator: " );
   scanf("%c", &temp);
   scanf("%c", &ch);
-  printf("Enter Number2:" );
+  printf("Enter Number2: " );
   scanf("%lf",&second);
   switch (ch) 
   {
     case '+':
-      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+      printf("%.1lf + %.1lf = %.1lf \n", first, second, first + second);
       break;
     case '-':
-      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+      printf("%.1lf - %.1lf = %.1lf \n", first, second, first - second);
       break;
     case '*':
-      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+      printf("%.1lf * %.1lf = %.1lf \n", first, second, first * second);
       break;
     case '/':
-      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+      printf("%.1lf / %.1lf = %.1lf \n", first, second, first / second);
       break;
     default:
       printf("Error! operator is not correct");

@@ -6,31 +6,36 @@ Topics to be covered
 
 
 #include <stdio.h>
-void swap(void* a, void* b, size_t size)
-{
-    void* temp = malloc(size);
-    memcpy(temp, a, size);
-    memcpy(a, b, size);
-    memcpy(b, temp, size);
-    free(temp);
+
+void swap(void* a, void* b, size_t size) {
+    char* p1 = (char*)a;
+    char* p2 = (char*)b;
+
+    for (size_t i = 0; i < size; i++) {
+        char temp = p1[i];
+        p1[i] = p2[i];
+        p2[i] = temp;
+    }
 }
 
-int main() 
-{
-    int a = 10, b = 20;
-    printf("Before swap: a = %d, b = %d\n", a, b);
-    swap(&a, &b, sizeof(int));
-    printf("After swap: a = %d, b = %d\n", a, b);
+int main() {
+    int num1 = 10;
+    int num2 = 20;
 
-    char c = 'X', d = 'Y';
-    printf("Before swap: c = %c, d = %c\n", c, d);
-    swap(&c, &d, sizeof(char));
-    printf("After swap: c = %c, d = %c\n", c, d);
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
 
-    double x = 3.14, y = 2.71;
-    printf("Before swap: x = %f, y = %f\n", x, y);
-    swap(&x, &y, sizeof(double));
-    printf("After swap: x = %f, y = %f\n", x, y);
+    swap(&num1, &num2, sizeof(int));
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    float f1 = 3.14;
+    float f2 = 2.718;
+
+    printf("Before swapping: f1 = %f, f2 = %f\n", f1, f2);
+
+    swap(&f1, &f2, sizeof(float));
+
+    printf("After swapping: f1 = %f, f2 = %f\n", f1, f2);
 
     return 0;
 }
